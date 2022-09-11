@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "961175614911",
+    "project_id": "pptapp-faf6d",
+    "storage_bucket": "pptapp-faf6d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:961175614911:android:b32560ff5aaf1b146ddd0a",
+        "android_client_info": {
+          "package_name": "com.example.pptapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "961175614911-69bar73n9jmtebtakkrta8bag0qubgib.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB53nkJ_Ng4E7rDqDlXQDYc01OEGhqRJus"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "961175614911-69bar73n9jmtebtakkrta8bag0qubgib.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

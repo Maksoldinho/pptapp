@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_online"
+    app:startDestination="@id/nav_gallery">
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="com.example.pptapp.ui_for_online_usage.gallery.GalleryFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_gallery" />
+
+
+    <fragment
+        android:id="@+id/nav_join_tournament"
+        android:name="com.example.pptapp.ui_for_online_usage.jointournament.JoinTournamentFragment"
+        android:label="Join Tournament"
+        tools:layout="@layout/fragment_jointournament"/>
+    <fragment
+        android:id="@+id/nav_friends"
+        android:name="com.example.pptapp.ui_for_online_usage.friends.FriendsFragment"
+        android:label="Friends"
+        tools:layout="@layout/fragment_friends"/>
+    <fragment
+        android:id="@+id/nav_create_tournament"
+        android:name="com.example.pptapp.ui_for_online_usage.createtournament.CreateTournamentFragment"
+        android:label="CreateTournamentFragment"
+        tools:layout="@layout/fragment_createtournament"/>
+    <fragment
+        android:id="@+id/nav_match_history"
+        android:name="com.example.pptapp.ui_for_online_usage.match_history.MatchHistoryFragment"
+        android:label="MatchHistoryFragment"
+        tools:layout="@layout/fragment_matchhistory"/>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.pptapp.ui_for_online_usage.profile.ProfileFragment"
+        android:label="ProfileFragment"
+        tools:layout="@layout/fragment_profile"/>
+</navigation>

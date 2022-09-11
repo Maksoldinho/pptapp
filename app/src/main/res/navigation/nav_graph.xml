@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/introPageActivity">
+
+    <fragment
+        android:id="@+id/entryPageActivity"
+        android:name="com.example.pptapp.EntryPageActivity"
+        android:label="EntryPageActivity" >
+        <action
+            android:id="@+id/action_entryPageActivity_to_registerPageActivity"
+            app:destination="@id/registerPageActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerPageActivity"
+        android:name="com.example.pptapp.RegisterPageActivity"
+        android:label="RegisterPageActivity" >
+        <action
+            android:id="@+id/action_registerPageActivity_to_entryPageActivity"
+            app:destination="@id/entryPageActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/introPageActivity"
+        android:name="com.example.pptapp.IntroPageActivity"
+        android:label="IntroPageActivity" >
+        <action
+            android:id="@+id/action_introPageActivity_to_entryPageActivity"
+            app:destination="@id/entryPageActivity" />
+    </fragment>
+</navigation>
