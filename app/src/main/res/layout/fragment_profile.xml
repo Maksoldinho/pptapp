@@ -15,6 +15,7 @@
         android:textAlignment="center"
         android:textSize="24dp"
         app:layout_constraintEnd_toEndOf="parent"
+
         app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
     <TextView
