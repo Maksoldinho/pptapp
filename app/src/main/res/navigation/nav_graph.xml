@@ -28,5 +28,20 @@
         <action
             android:id="@+id/action_introPageActivity_to_entryPageActivity"
             app:destination="@id/entryPageActivity" />
+        <action
+            android:id="@+id/action_introPageActivity_to_selectPageFragment"
+            app:destination="@id/selectPageFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/selectPageFragment"
+        android:name="com.example.pptapp.ui_for_offline_usage.SelectPageFragment"
+        android:label="SelectPageFragment" >
+        <action
+            android:id="@+id/action_selectPageFragment_to_addTeamsFragment"
+            app:destination="@id/addTeamsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addTeamsFragment"
+        android:name="com.example.pptapp.ui_for_offline_usage.AddTeamsFragment"
+        android:label="AddTeamsFragment" />
 </navigation>

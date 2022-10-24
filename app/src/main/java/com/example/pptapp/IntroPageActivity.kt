@@ -24,8 +24,9 @@ class IntroPageActivity:Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.goOfflineBtn.setOnClickListener {
 
+        binding.goOfflineBtn.setOnClickListener {
+            findNavController().navigate(R.id.action_introPageActivity_to_selectPageFragment)
         }
         binding.goOnlineBtn.setOnClickListener {
             findNavController().navigate(R.id.action_introPageActivity_to_entryPageActivity)
