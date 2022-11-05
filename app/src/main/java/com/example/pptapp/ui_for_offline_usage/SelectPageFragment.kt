@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.example.pptapp.PPGame
 import com.example.pptapp.R
 import com.example.pptapp.databinding.FragmentCreatetournamentBinding
 import com.example.pptapp.databinding.OfflineSelectPageBinding
@@ -31,12 +32,14 @@ class SelectPageFragment : Fragment() {
             adapter.setDropDownViewResource(android.R.layout.simple_spinner_item)
             spinner.adapter = adapter
         }
+
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.button.setOnClickListener {
+            PPGame.setNumberOfTeams((binding.spinnerNumberOfTeams.selectedItem.toString().toInt()))
             findNavController().navigate(R.id.action_selectPageFragment_to_addTeamsFragment)
         }
     }
