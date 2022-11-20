@@ -43,5 +43,13 @@
     <fragment
         android:id="@+id/addTeamsFragment"
         android:name="com.example.pptapp.ui_for_offline_usage.AddTeamsFragment"
-        android:label="AddTeamsFragment" />
+        android:label="AddTeamsFragment" >
+        <action
+            android:id="@+id/action_addTeamsFragment_to_playFragment"
+            app:destination="@id/playFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/playFragment"
+        android:name="com.example.pptapp.ui_for_offline_usage.PlayFragment"
+        android:label="PlayFragment" />
 </navigation>

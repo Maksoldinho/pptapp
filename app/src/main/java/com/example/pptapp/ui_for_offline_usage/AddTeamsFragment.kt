@@ -8,10 +8,12 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.pptapp.MainPageActivity
 import com.example.pptapp.PPGame
+import com.example.pptapp.R
 import com.example.pptapp.databinding.OfflineAddTeamsBinding
 
 class AddTeamsFragment : Fragment() {
@@ -51,6 +53,7 @@ class AddTeamsFragment : Fragment() {
         binding.btnBeginTournament.setOnClickListener {
             if (teamList.size == PPGame.getNumberOfTeams()){
                 PPGame.setAllTeams(teamList)
+                findNavController().navigate(R.id.action_addTeamsFragment_to_playFragment)
             }
             else{
                 Toast.makeText(requireContext(),"Please add more teams", Toast.LENGTH_SHORT).show()
