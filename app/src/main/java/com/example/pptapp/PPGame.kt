@@ -7,6 +7,8 @@ import org.w3c.dom.Text
 object PPGame {
     private var numOfTeams: Int = 0
     private var teams = ArrayList<String>()
+    private lateinit var matches: MutableMap<String, String>
+    private var winners = ArrayList<String>()
 
     fun setNumberOfTeams(number: Int){
         println("number of teams: $number")
@@ -23,6 +25,13 @@ object PPGame {
     }
     fun getTeams() : ArrayList<String>{
         return teams
+    }
+    fun setMatches(_matches: MutableMap<String, String>){
+        matches = _matches
+        println("Printing matches from PPGame.kt $matches")
+    }
+    fun addWinner(team_winner: String){
+        winners.add(team_winner)
     }
 
 
