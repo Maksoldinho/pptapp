@@ -13,6 +13,7 @@
         android:layout_marginTop="16dp"
         android:text="PPT"
         android:textSize="64dp"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -29,7 +30,7 @@
 
     <EditText
         android:id="@+id/editText_team_name"
-        android:layout_width="231dp"
+        android:layout_width="200dp"
         android:layout_height="63dp"
         android:layout_marginTop="19dp"
         android:hint="Enter team name"

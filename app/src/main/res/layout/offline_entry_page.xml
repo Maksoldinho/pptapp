@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/background">
 
     <TextView
         android:id="@+id/textView10"
@@ -13,6 +14,7 @@
         android:layout_marginBottom="190dp"
         android:text="PPT"
         android:textSize="64dp"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/btn_play"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -27,10 +29,16 @@
         app:layout_constraintBottom_toTopOf="@+id/btn_match_history"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+        app:layout_constraintTop_toBottomOf="@+id/textView10"
+        android:backgroundTint="@color/blue_for_btn"
+        android:textColor="@color/black"
+
+        />
 
     <Button
         android:id="@+id/btn_match_history"
+        android:backgroundTint="@color/blue_for_btn"
+        android:textColor="@color/black"
         android:layout_width="160dp"
         android:layout_height="0dp"
         android:layout_marginBottom="232dp"

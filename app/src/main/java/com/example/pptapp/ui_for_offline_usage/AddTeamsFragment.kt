@@ -41,7 +41,8 @@ class AddTeamsFragment : Fragment() {
         recv.adapter = myListAdapter
 
             binding.btnAddPlayers.setOnClickListener {
-                if(teamList.size < PPGame.getNumberOfTeams()) {
+                if(teamList.size < PPGame.getNumberOfTeams() && binding.editTextTeamName.text.toString()
+                        .isNotBlank()) {
                     teamList.add(binding.editTextTeamName.text.toString())
                     myListAdapter.notifyDataSetChanged()
                     binding.editTextTeamName.text.clear()
@@ -49,6 +50,7 @@ class AddTeamsFragment : Fragment() {
                     Toast.makeText(requireContext(),"Can't add more teams", Toast.LENGTH_SHORT).show()
                 }
             }
+
 
         binding.btnBeginTournament.setOnClickListener {
             if (teamList.size == PPGame.getNumberOfTeams()){

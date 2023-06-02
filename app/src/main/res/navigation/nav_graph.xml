@@ -51,5 +51,17 @@
     <fragment
         android:id="@+id/playFragment"
         android:name="com.example.pptapp.ui_for_offline_usage.PlayFragment"
-        android:label="PlayFragment" />
+        android:label="PlayFragment" >
+        <action
+            android:id="@+id/action_playFragment_to_finalResultsFragment"
+            app:destination="@id/finalResultsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/finalResultsFragment"
+        android:name="com.example.pptapp.ui_for_offline_usage.FinalResultsFragment"
+        android:label="FinalResul tsFragment" >
+        <action
+            android:id="@+id/action_finalResultsFragment_to_introPageActivity"
+            app:destination="@id/introPageActivity" />
+    </fragment>
 </navigation>

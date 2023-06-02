@@ -11,7 +11,13 @@
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <item name="android:popupMenuStyle">@style/Theme.Pptapp.PopupMenu</item>
         <!-- Customize your theme here. -->
+    </style>
+
+
+    <style name="Theme.Pptapp.PopupMenu" parent="@android:style/Widget.PopupWindow">
+        <item name="android:popupBackground">@android:color/white</item>
     </style>
 
     <style name="Theme.Pptapp.NoActionBar">

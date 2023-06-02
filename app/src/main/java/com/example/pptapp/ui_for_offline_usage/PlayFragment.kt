@@ -4,12 +4,14 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentTransaction
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.pptapp.PPGame
 import com.example.pptapp.R
-import com.example.pptapp.databinding.OfflineAddTeamsBinding
 import com.example.pptapp.databinding.OfflinePlayBinding
 
 class PlayFragment: Fragment() {
@@ -38,9 +40,6 @@ class PlayFragment: Fragment() {
 //        Инициализация фрагмента
         recv = binding.playRecyclerView
         matchesList = mutableMapOf()
-        myListAdapter = MatchesListAdapter(requireContext(), matchesList )
-        recv.layoutManager = LinearLayoutManager(requireContext())
-        recv.adapter = myListAdapter
         for(i in 1..amountOfTeams/2){
             if(amountOfTeams == 2){
                 matchesList.put(teams[i-1], teams[i])
@@ -54,7 +53,28 @@ class PlayFragment: Fragment() {
         }
         println("Map: $matchesList")
         PPGame.setMatches(matchesList)
+        myListAdapter = MatchesListAdapter(requireContext(), PPGame.getMatches() )
+        recv.layoutManager = LinearLayoutManager(requireContext())
+        recv.adapter = myListAdapter
+
         myListAdapter.notifyDataSetChanged()
+        binding.buttonNext.setOnClickListener {
+                if(PPGame.getWinners().size == PPGame.getTeams().size/2 && PPGame.getWinners().size != 1){
+                    println("ALL GOOOD!")
+                    PPGame.moveToNextStage()
+                    myListAdapter.x = 0
+                    myListAdapter.notifyDataSetChanged()
+            }
+            else {
+                    Toast.makeText(requireContext(),"You must play all matches, before going to the next round!", Toast.LENGTH_SHORT).show()
+                }
+            if(PPGame.getWinners().size == 2 && PPGame.getTeams().size== 2|| PPGame.getWinners().size == 1&& PPGame.getTeams().size == 2){
+                println("We have the winner")
+                findNavController().navigate(R.id.action_playFragment_to_finalResultsFragment)
+
+            }
+        }
+//сделать метод который просто будет все ресетать и перекидывать условно говоря на новый этап и все!!
 
 
 ////        Инициализация play_item
@@ -64,4 +84,10 @@ class PlayFragment: Fragment() {
 //        println(buttonPlay)
 ////        buttonPlay.setOnClickListener { println("Hooray! I am pressed! These are teams in match: ${playItem.team_name_two}, ${playItem.team_name_two}") }
     }
+
+
+    
+
+
+
 }

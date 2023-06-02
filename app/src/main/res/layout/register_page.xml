@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background">
     <TextView
         android:id="@+id/tvRegistration"
         android:layout_width="wrap_content"
@@ -41,7 +42,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/register_email_EditText" />
+        app:layout_constraintTop_toBottomOf="@+id/register_email_EditText"
+        />
 
     <EditText
         android:id="@+id/confirm_pwd_EditText"
@@ -54,7 +56,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pwd_EditText" />
+        app:layout_constraintTop_toBottomOf="@+id/pwd_EditText"
+        android:textColor="@color/black"
+        />
 
     <Button
         android:id="@+id/btn_create_account"
@@ -66,5 +70,7 @@
         app:layout_constraintTop_toBottomOf="@+id/confirm_pwd_EditText"
         android:text="Create"
         android:textSize="24sp"
+        android:backgroundTint="@color/blue_for_btn"
+        android:textColor="@color/black"
         />
 </androidx.constraintlayout.widget.ConstraintLayout>
